@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Home page</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'><link rel="stylesheet" href="./css/LoginStyle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			 <img src="./images/regesration.png" alt="Trulli" width="150" height="120">
+			 <form class="login">
+				<div class="login__field">
+				  <i class="login__icon fas fa-user"></i>
+				  <input type="text" class="login__input" id="fild1" placeholder="Stduent First Name">
+				</div>
+				<div class="login__field">
+				  <i class="login__icon fas fa-user"></i>
+				  <input type="text" class="login__input" id="fild2" placeholder="Student Last Name">
+				</div>
+				<div class="login__field">
+				  <i class="login__icon fas fa-user"></i>
+				  <input type="email" class="login__input" id="fild3" placeholder="Student Email">
+				</div>
+				<div class="login__field">
+				  <i class="login__icon fas fa-lock"></i>
+				  <input type="password" class="login__input" id="fild4" placeholder="Password">
+				</div>
+				<div class="login__field">
+				  <i class="login__icon fas fa-lock"></i>
+				  <input type="password" class="login__input" id="fild5" placeholder="re-type password">
+				</div>
+				<div id="error" style="color:red;"></div>
+				<button class="button login__submit" onclick="validateForm()">
+				  <span class="button__text">Save</span>
+				  <i class="button__icon fas fa-chevron-right"></i>
+			  </form>
+			 
+			  <script>
+			  function validateForm() {
+				var fname = document.getElementById("fild1").value;
+				var lname = document.getElementById("fild2").value;
+				var email = document.getElementById("fild3").value;
+				var password = document.getElementById("fild4").value;
+				var password2 = document.getElementById("fild5").value;
+				var error = document.getElementById("error");
+				
+				if (!fname) {
+	             alert("firts name requred  ");
+				  return false;
+				} else if (!lname) {
+					alert("last name requre ");
+				  return false;
+				} else if (!email) {
+					alert("password name requre ");
+				  return false;
+				} else if (!password) {
+					alert("password requred ");
+				  return false;
+				} else if (password != password2) {
+					alert("re-password have to match the uper one  ");
+				  return false;
+				} else {			
+				  return true;
+				  window.location.href="index.html";
+				}
+			  }
+			  </script>
+			  
+			<div class="social-login">
+
+				<h3>log in via</h3>
+	
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
